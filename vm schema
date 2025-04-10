@@ -1,0 +1,213 @@
+{
+  "name": "Test VM",
+  "description": "Description for your VM",
+  "source": {
+    "entityType": "VM"
+  },
+  "numSockets": 24,
+  "numCoresPerSocket": 40,
+  "numThreadsPerCore": 37,
+  "numNumaNodes": 16,
+  "memorySizeBytes": 79,
+  "isVcpuHardPinningEnabled": false,
+  "isCpuPassthroughEnabled": true,
+  "enabledCpuFeatures": [
+    "HARDWARE_VIRTUALIZATION"
+  ],
+  "isMemoryOvercommitEnabled": true,
+  "isGpuConsoleEnabled": true,
+  "isCpuHotplugEnabled": false,
+  "isScsiControllerEnabled": false,
+  "generationUuid": "574829a1-5b23-4ccc-a6f5-1b573c152d22",
+  "biosUuid": "c95aa0dd-c47b-413f-a63c-ed82beee6f1c",
+  "categories": [
+    {
+      "extId": "faa7854f-fc24-444b-a40d-ea56b144c068"
+    }
+  ],
+  "ownershipInfo": {
+    "owner": {
+      "extId": "820349bc-c59a-46a3-9533-5a29864cec61"
+    }
+  },
+  "host": {
+    "extId": "c85c4c2f-c08a-406f-b934-e462ab3f1344"
+  },
+  "cluster": {
+    "extId": "e0bad15c-f9d1-4347-b251-d76d386e82d4"
+  },
+  "availabilityZone": {
+    "extId": "4b0240b7-984e-449a-a5e1-b148bdee5264"
+  },
+  "guestCustomization": {
+    "config": {
+      "$objectType": "vmm.v4.ahv.config.Sysprep",
+      "installType": "FRESH",
+      "sysprepScript": {
+        "$objectType": "vmm.v4.ahv.config.Unattendxml",
+        "value": "string"
+      }
+    }
+  },
+  "guestTools": {
+    "isEnabled": true,
+    "capabilities": [
+      "SELF_SERVICE_RESTORE"
+    ]
+  },
+  "hardwareClockTimezone": "UTC",
+  "isBrandingEnabled": false,
+  "bootConfig": {
+    "$objectType": "vmm.v4.ahv.config.LegacyBoot",
+    "bootDevice": {
+      "$objectType": "vmm.v4.ahv.config.BootDeviceDisk",
+      "diskAddress": {
+        "busType": "SCSI",
+        "index": 3
+      }
+    },
+    "bootOrder": [
+      "CDROM"
+    ]
+  },
+  "isVgaConsoleEnabled": true,
+  "machineType": "PC",
+  "powerState": "ON",
+  "vtpmConfig": {
+    "isVtpmEnabled": true
+  },
+  "isAgentVm": false,
+  "apcConfig": {
+    "isApcEnabled": true,
+    "cpuModel": {
+      "extId": "d2bfd9de-700b-4ddf-8c8e-83f63c3565bc",
+      "name": "Haswell"
+    }
+  },
+  "storageConfig": {
+    "isFlashModeEnabled": true,
+    "qosConfig": {
+      "throttledIops": 75
+    }
+  },
+  "disks": [
+    {
+      "diskAddress": {
+        "busType": "SCSI",
+        "index": 3
+      },
+      "backingInfo": {
+        "$objectType": "vmm.v4.ahv.config.VmDisk",
+        "diskSizeBytes": 46,
+        "storageContainer": {
+          "extId": "c1a39b16-fd62-41d3-b83e-ff006c19cf6e"
+        },
+        "storageConfig": {
+          "isFlashModeEnabled": true
+        },
+        "dataSource": {
+          "reference": {
+            "$objectType": "vmm.v4.ahv.config.ImageReference",
+            "imageExtId": "2bdbcec9-4333-46c5-a7d1-0b93c9233744"
+          }
+        }
+      }
+    }
+  ],
+  "cdRoms": [
+    {
+      "diskAddress": {
+        "busType": "IDE",
+        "index": 94
+      },
+      "backingInfo": {
+        "diskSizeBytes": 46,
+        "storageContainer": {
+          "extId": "c1a39b16-fd62-41d3-b83e-ff006c19cf6e"
+        },
+        "storageConfig": {
+          "isFlashModeEnabled": true
+        },
+        "dataSource": {
+          "reference": {
+            "$objectType": "vmm.v4.ahv.config.ImageReference",
+            "imageExtId": "2bdbcec9-4333-46c5-a7d1-0b93c9233744"
+          }
+        }
+      },
+      "isoType": "OTHER"
+    }
+  ],
+  "nics": [
+    {
+      "backingInfo": {
+        "model": "VIRTIO",
+        "macAddress": "df:8d:df:d8:39:c6",
+        "isConnected": true,
+        "numQueues": 1
+      },
+      "networkInfo": {
+        "nicType": "NORMAL_NIC",
+        "networkFunctionChain": {
+          "extId": "493f7732-39dc-411d-8798-864fe3cb44d2"
+        },
+        "networkFunctionNicType": "INGRESS",
+        "subnet": {
+          "extId": "28a0f367-14d6-4b0d-a567-ff48b590b156"
+        },
+        "vlanMode": "ACCESS",
+        "trunkedVlans": [
+          28
+        ],
+        "shouldAllowUnknownMacs": false,
+        "ipv4Config": {
+          "shouldAssignIp": false,
+          "ipAddress": {
+            "value": "248.218.207.162",
+            "prefixLength": 32
+          },
+          "secondaryIpAddressList": [
+            {
+              "value": "248.218.207.162",
+              "prefixLength": 32
+            }
+          ]
+        },
+        "ipv4Info": {}
+      }
+    }
+  ],
+  "gpus": [
+    {
+      "mode": "PASSTHROUGH_GRAPHICS",
+      "deviceId": 52,
+      "vendor": "NVIDIA",
+      "pciAddress": {}
+    }
+  ],
+  "serialPorts": [
+    {
+      "isConnected": false,
+      "index": 3
+    }
+  ],
+  "protectionType": "UNPROTECTED",
+  "protectionPolicyState": {
+    "policy": {
+      "extId": "de17741c-3dc8-449a-9b31-0038687c07d6"
+    }
+  },
+  "pcieDevices": [
+    {
+      "assignedDeviceInfo": {
+        "device": {
+          "deviceExtId": "57ea3a89-e6c7-4dd1-b132-9aabc00d13e7"
+        }
+      },
+      "backingInfo": {
+        "$objectType": "vmm.v4.ahv.config.PcieDeviceReference",
+        "deviceExtId": "57ea3a89-e6c7-4dd1-b132-9aabc00d13e7"
+      }
+    }
+  ]
+}

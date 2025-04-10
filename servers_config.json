@@ -1,0 +1,10 @@
+{
+    "mcpServers": {
+        "nutanix mcp server": {
+            "command": "/Users/saurabh.shinde/nutanix-mcp/venv/bin/python",
+            "args": [
+                "/Users/saurabh.shinde/nutanix-mcp/nutanix_mcp_server.py"
+            ]
+        }
+    }
+}
